@@ -24,7 +24,7 @@ responsible for creating the sound (with help from `Oscillator.swift`)
 
 ## Rules
 
-1. Create a repo on Github or Bitbucket and pusch this project (Don't fork!)
+1. Create a repo on Github or Bitbucket and push this project (Don't fork!)
 2. Make commits as often as possible! *(We want see what you do and how you do it)*
 3. When you finish, send us the link to your repo by email
 4. Please don't spend more than two hours on it! (1h should be fine)
