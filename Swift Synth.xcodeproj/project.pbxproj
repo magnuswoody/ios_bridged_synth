@@ -13,11 +13,25 @@
 		550D024B22E526DE002C57C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550D024A22E526DE002C57C9 /* Assets.xcassets */; };
 		550D024E22E526DE002C57C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550D024C22E526DE002C57C9 /* LaunchScreen.storyboard */; };
 		550D025622E53233002C57C9 /* UIView+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D025522E53233002C57C9 /* UIView+Add.swift */; };
-		550D025822E55477002C57C9 /* Synth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D025722E55477002C57C9 /* Synth.swift */; };
-		550D025E22E557A5002C57C9 /* Oscillator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D025D22E557A5002C57C9 /* Oscillator.swift */; };
 		55FB1E6322EE0B8700AED3D2 /* UIColor+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB1E6222EE0B8700AED3D2 /* UIColor+Set.swift */; };
 		DB7A8236238817320075C7C1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DB7A8235238817320075C7C1 /* README.md */; };
+		F7843E60241572C400583096 /* Synth.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E5F241572C400583096 /* Synth.m */; };
+		F7843E6B2415736800583096 /* Swift_SynthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E6A2415736800583096 /* Swift_SynthTests.m */; };
+		F7843E732415737F00583096 /* SynthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E722415737F00583096 /* SynthTests.m */; };
+		F7843E762415808700583096 /* Oscillator.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E752415808700583096 /* Oscillator.m */; };
+		F7843E772415808700583096 /* Oscillator.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E752415808700583096 /* Oscillator.m */; };
+		F7843E79241580D000583096 /* OscillatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E78241580D000583096 /* OscillatorTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7843E6D2415736800583096 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 550D023622E526DD002C57C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 550D023D22E526DD002C57C9;
+			remoteInfo = "Swift Synth";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		550D023E22E526DD002C57C9 /* Swift Synth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Synth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,14 +42,29 @@
 		550D024D22E526DE002C57C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		550D024F22E526DE002C57C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		550D025522E53233002C57C9 /* UIView+Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Add.swift"; sourceTree = "<group>"; };
-		550D025722E55477002C57C9 /* Synth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synth.swift; sourceTree = "<group>"; };
-		550D025D22E557A5002C57C9 /* Oscillator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oscillator.swift; sourceTree = "<group>"; };
 		55FB1E6222EE0B8700AED3D2 /* UIColor+Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Set.swift"; sourceTree = "<group>"; };
 		DB7A8235238817320075C7C1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F7843E5D241572C400583096 /* Swift Synth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift Synth-Bridging-Header.h"; sourceTree = "<group>"; };
+		F7843E5E241572C400583096 /* Synth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Synth.h; sourceTree = "<group>"; };
+		F7843E5F241572C400583096 /* Synth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Synth.m; sourceTree = "<group>"; };
+		F7843E682415736700583096 /* Swift SynthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift SynthTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7843E6A2415736800583096 /* Swift_SynthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Swift_SynthTests.m; sourceTree = "<group>"; };
+		F7843E6C2415736800583096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7843E722415737F00583096 /* SynthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynthTests.m; sourceTree = "<group>"; };
+		F7843E742415808700583096 /* Oscillator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Oscillator.h; sourceTree = "<group>"; };
+		F7843E752415808700583096 /* Oscillator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Oscillator.m; sourceTree = "<group>"; };
+		F7843E78241580D000583096 /* OscillatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OscillatorTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		550D023B22E526DD002C57C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7843E652415736700583096 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,6 +79,7 @@
 			children = (
 				DB7A8235238817320075C7C1 /* README.md */,
 				550D024022E526DD002C57C9 /* Swift Synth */,
+				F7843E692415736800583096 /* Swift SynthTests */,
 				550D023F22E526DD002C57C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				550D023E22E526DD002C57C9 /* Swift Synth.app */,
+				F7843E682415736700583096 /* Swift SynthTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,8 +119,11 @@
 		550D025A22E556BA002C57C9 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				550D025722E55477002C57C9 /* Synth.swift */,
-				550D025D22E557A5002C57C9 /* Oscillator.swift */,
+				F7843E5E241572C400583096 /* Synth.h */,
+				F7843E5F241572C400583096 /* Synth.m */,
+				F7843E5D241572C400583096 /* Swift Synth-Bridging-Header.h */,
+				F7843E742415808700583096 /* Oscillator.h */,
+				F7843E752415808700583096 /* Oscillator.m */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -119,6 +153,17 @@
 			path = "UIColor Extensions";
 			sourceTree = "<group>";
 		};
+		F7843E692415736800583096 /* Swift SynthTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7843E6A2415736800583096 /* Swift_SynthTests.m */,
+				F7843E6C2415736800583096 /* Info.plist */,
+				F7843E722415737F00583096 /* SynthTests.m */,
+				F7843E78241580D000583096 /* OscillatorTests.m */,
+			);
+			path = "Swift SynthTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +184,24 @@
 			productReference = 550D023E22E526DD002C57C9 /* Swift Synth.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F7843E672415736700583096 /* Swift SynthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7843E6F2415736800583096 /* Build configuration list for PBXNativeTarget "Swift SynthTests" */;
+			buildPhases = (
+				F7843E642415736700583096 /* Sources */,
+				F7843E652415736700583096 /* Frameworks */,
+				F7843E662415736700583096 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7843E6E2415736800583096 /* PBXTargetDependency */,
+			);
+			name = "Swift SynthTests";
+			productName = "Swift SynthTests";
+			productReference = F7843E682415736700583096 /* Swift SynthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -151,6 +214,11 @@
 				TargetAttributes = {
 					550D023D22E526DD002C57C9 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1130;
+					};
+					F7843E672415736700583096 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 550D023D22E526DD002C57C9;
 					};
 				};
 			};
@@ -168,6 +236,7 @@
 			projectRoot = "";
 			targets = (
 				550D023D22E526DD002C57C9 /* Swift Synth */,
+				F7843E672415736700583096 /* Swift SynthTests */,
 			);
 		};
 /* End PBXProject section */
@@ -183,6 +252,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7843E662415736700583096 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -193,14 +269,33 @@
 				55FB1E6322EE0B8700AED3D2 /* UIColor+Set.swift in Sources */,
 				550D025622E53233002C57C9 /* UIView+Add.swift in Sources */,
 				550D024622E526DD002C57C9 /* SynthViewController.swift in Sources */,
+				F7843E762415808700583096 /* Oscillator.m in Sources */,
 				550D024222E526DD002C57C9 /* AppDelegate.swift in Sources */,
-				550D025E22E557A5002C57C9 /* Oscillator.swift in Sources */,
-				550D025822E55477002C57C9 /* Synth.swift in Sources */,
+				F7843E60241572C400583096 /* Synth.m in Sources */,
 				550D024422E526DD002C57C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7843E642415736700583096 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7843E772415808700583096 /* Oscillator.m in Sources */,
+				F7843E732415737F00583096 /* SynthTests.m in Sources */,
+				F7843E6B2415736800583096 /* Swift_SynthTests.m in Sources */,
+				F7843E79241580D000583096 /* OscillatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7843E6E2415736800583096 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 550D023D22E526DD002C57C9 /* Swift Synth */;
+			targetProxy = F7843E6D2415736800583096 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		550D024C22E526DE002C57C9 /* LaunchScreen.storyboard */ = {
@@ -332,15 +427,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = URG8NKU79W;
+				DEVELOPMENT_TEAM = FLC5BXBT6N;
 				INFOPLIST_FILE = "Swift Synth/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pictural.ai.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.woodydev.pictural.ai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift Synth/Audio/Swift Synth-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -350,17 +448,61 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = URG8NKU79W;
+				DEVELOPMENT_TEAM = FLC5BXBT6N;
 				INFOPLIST_FILE = "Swift Synth/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pictural.ai.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.woodydev.pictural.ai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift Synth/Audio/Swift Synth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F7843E702415736800583096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FLC5BXBT6N;
+				INFOPLIST_FILE = "Swift SynthTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mwoodgate.dev.Swift-SynthTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift Synth.app/Swift Synth";
+			};
+			name = Debug;
+		};
+		F7843E712415736800583096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FLC5BXBT6N;
+				INFOPLIST_FILE = "Swift SynthTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mwoodgate.dev.Swift-SynthTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift Synth.app/Swift Synth";
 			};
 			name = Release;
 		};
@@ -381,6 +523,15 @@
 			buildConfigurations = (
 				550D025322E526DE002C57C9 /* Debug */,
 				550D025422E526DE002C57C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7843E6F2415736800583096 /* Build configuration list for PBXNativeTarget "Swift SynthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7843E702415736800583096 /* Debug */,
+				F7843E712415736800583096 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

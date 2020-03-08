@@ -6,7 +6,7 @@ class SynthViewController: UIViewController {
     private lazy var parameterLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.text = "Frequency: 0 Hz  Amplitude: 0%"
+        label.text = "Frequency: 0 Hz | Amplitude: 0% | Playback Status: "
         label.translatesAutoresizingMaskIntoConstraints = false
 
 		return label
@@ -53,24 +53,26 @@ class SynthViewController: UIViewController {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         setPlaybackStateTo(false)
-        parameterLabel.text = "Frequency: 0 Hz  Amplitude: 0%"
+        parameterLabel.text = "Frequency: 0 Hz | Amplitude: 0% | Playback Status: "
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         setPlaybackStateTo(false)
-        parameterLabel.text = "Frequency: 0 Hz  Amplitude: 0%"
+        parameterLabel.text = "Frequency: 0 Hz | Amplitude: 0% | Playback Status: "
     }
     
     // MARK: Selector Functions
     
     @objc private func updateOscillatorWaveform() {
-        let waveform = Waveform(rawValue: waveformSelectorSegmentedControl.selectedSegmentIndex)!
+        let waveform = Waveform(rawValue: UInt(waveformSelectorSegmentedControl.selectedSegmentIndex))!
+        
         switch waveform {
-            case .sine: Synth.shared.setWaveformTo(Oscillator.sine)
-            case .triangle: Synth.shared.setWaveformTo(Oscillator.triangle)
-            case .sawtooth: Synth.shared.setWaveformTo(Oscillator.sawtooth)
-            case .square: Synth.shared.setWaveformTo(Oscillator.square)
-            case .whiteNoise: Synth.shared.setWaveformTo(Oscillator.whiteNoise)
+               case .sine: Synth.shared.setWaveformTo(Oscillator.sine)
+               case .triangle: Synth.shared.setWaveformTo(Oscillator.triangle)
+               case .sawtooth: Synth.shared.setWaveformTo(Oscillator.sawtooth)
+               case .square: Synth.shared.setWaveformTo(Oscillator.square)
+               case .whiteNoise: Synth.shared.setWaveformTo(Oscillator.whiteNoise)
+        @unknown default: Synth.shared.setWaveformTo(Oscillator.sine)
         }
     }
     
@@ -102,6 +104,6 @@ class SynthViewController: UIViewController {
         
         let amplitudePercent = Int(Oscillator.amplitude * 100)
         let frequencyHertz = Int(Oscillator.frequency)
-        parameterLabel.text = "Frequency: \(frequencyHertz) Hz  Amplitude: \(amplitudePercent)%"
+        parameterLabel.text = "Frequency: \(frequencyHertz) Hz  | Amplitude: \(amplitudePercent)% | Playback Status: \(Synth.shared.isPlaying ? "Playing..." : "")"
     }
 }
