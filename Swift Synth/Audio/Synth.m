@@ -13,6 +13,10 @@
 @interface Synth()
 
 @property (nonatomic, strong) AVAudioEngine *engine;
+@property (nonatomic, strong) AVAudioSourceNode *sourceNode;
+@property (nonatomic, assign) double sampleRate;
+@property (nonatomic, assign) float deltaTime;
+@property (nonatomic, assign) float time;
 
 @end
 
@@ -43,7 +47,14 @@
 
 - (id)init {
     if ( self = [super init] ) {
-        _engine = [[AVAudioEngine alloc] init];        
+        _engine = [[AVAudioEngine alloc] init];
+        
+        AVAudioFormat* format = [_engine.outputNode inputFormatForBus:0];
+        
+        _time = 0.01f;
+        _sampleRate = format.sampleRate;
+        _deltaTime = 1.0f / ((float)self.sampleRate);
+        
         return self;
     } else {
         return self;
