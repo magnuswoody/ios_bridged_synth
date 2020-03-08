@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Synth : NSObject
 
+@property (nonatomic, assign) float volume;
+
 +(Synth*) shared;
 
 @end

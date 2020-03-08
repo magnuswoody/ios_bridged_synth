@@ -34,6 +34,14 @@
     XCTAssertEqualObjects(ref0, ref1);
 }
 
+- (void)testVolumeSetterGetter {
+    float expectedVolume = 0.5f;
+    
+    [Synth shared].volume = expectedVolume;
+    XCTAssertEqual([Synth shared].volume, expectedVolume);
+}
+
+
 
 
 @end
