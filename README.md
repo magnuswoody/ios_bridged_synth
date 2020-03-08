@@ -1,5 +1,20 @@
 # Coding challenge
 
+# Additional Information
+
+## How would you generate 3 voices simultaneously using this synthesizer?
+
+Using **additive synthesis**, the process of generating three voices is as simple as adding the resulting output of each wave (or `signal` output) for a given sample in time.
+
+i.e. For time `t`, to produce a three voice synth the following three wave types could be added:
+```
+output(t) = sine(t) + square(t) + triangle(t)
+```
+
+This is of course generic and works for `1 -> N` oscillators (but of course depends on your computation power : this could become very expensive if implemented inefficiently).
+
+
+# Original README
 ## Introduction
 
 This project contains a simple audio synthesizer written in Swift.
