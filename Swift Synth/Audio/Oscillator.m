@@ -33,4 +33,36 @@ static float _frequency = 440.0f; // Hz
     _frequency = frequency;
 }
 
+#pragma mark - Public Static Methods
+
++(Signal) sine {
+    return ^float(float time) {
+        return 0.0f;
+    };
+}
+
++(Signal) triangle {
+    return ^float(float time) {
+        return 0.0f;
+    };
+}
+
++(Signal) sawtooth {
+    return ^float(float time) {
+        return 0.0f;
+    };
+}
+
++(Signal) square {
+    return ^float(float time) {
+        return 0.0f;
+    };
+}
+
++(Signal) whitenoise {
+    return ^float(float time) {
+        return 0.0f;
+    };
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SynthUtilTypes.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (class) float amplitude;
 @property (class) float frequency;
+
++(Signal) sine;
++(Signal) triangle;
++(Signal) sawtooth;
++(Signal) square;
++(Signal) whitenoise;
 
 @end
 

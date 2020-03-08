@@ -37,4 +37,23 @@
     XCTAssertEqual(Oscillator.amplitude, targetAmplitude);
 }
 
+- (void)testSignalsAreGenerated {
+    
+    Signal sine = [Oscillator sine];
+    XCTAssertNotNil(sine);
+    
+    Signal triangle = [Oscillator triangle];
+    XCTAssertNotNil(triangle);
+    
+    Signal sawtooth = [Oscillator sawtooth];
+    XCTAssertNotNil(sawtooth);
+    
+    Signal square = [Oscillator square];
+    XCTAssertNotNil(square);
+    
+    Signal whitenoise = [Oscillator whitenoise];
+    XCTAssertNotNil(whitenoise);
+    
+}
+
 @end
