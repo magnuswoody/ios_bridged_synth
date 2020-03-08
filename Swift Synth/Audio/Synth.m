@@ -51,9 +51,24 @@
         
         AVAudioFormat* format = [_engine.outputNode inputFormatForBus:0];
         
+        // Initialize and calculate synthesis parameters
         _time = 0.01f;
         _sampleRate = format.sampleRate;
         _deltaTime = 1.0f / ((float)self.sampleRate);
+        
+        // Setup input format as seen in Synth.swift
+        AVAudioFormat* inputFormat = [[AVAudioFormat alloc] initWithCommonFormat:format.commonFormat sampleRate:_sampleRate channels:1 interleaved:format.isInterleaved];
+        
+        // Make sure Engine is reset
+        [_engine reset];
+        
+        // Add source node to routing graph
+        [_engine attachNode:[self sourceNode]];
+        
+        // Setup audio graph node routing
+        [_engine connect:_sourceNode to:_engine.mainMixerNode format:inputFormat];
+        [_engine connect:_engine.mainMixerNode to:_engine.outputNode format:nil];
+        _engine.mainMixerNode.outputVolume = 0.0f; // Default Behaviour muted to begin with...
         
         return self;
     } else {
