@@ -41,7 +41,16 @@
     XCTAssertEqual([Synth shared].volume, expectedVolume);
 }
 
+- (void)testIsPlayingToUser {
+        
+    float playingVolume = 0.5f;
+    float mutedVolume = 0.0f;
+    
+    [Synth shared].volume = playingVolume;
+    XCTAssertTrue([Synth shared].isPlaying);
 
-
+    [Synth shared].volume = mutedVolume;
+    XCTAssertFalse([Synth shared].isPlaying);
+}
 
 @end
