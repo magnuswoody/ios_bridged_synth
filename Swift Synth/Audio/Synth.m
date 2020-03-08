@@ -35,6 +35,7 @@
 }
 
 # pragma mark - Public Properties
+
 - (void)setVolume:(float)volume {
     _engine.mainMixerNode.outputVolume = volume;
 }
@@ -76,4 +77,22 @@
     }
 }
 
+# pragma mark - Private Properties
+
+- (AVAudioSourceNode*)sourceNode
+{
+    // Lazy instantiation style
+    if (_sourceNode == nil) {
+        _sourceNode = [[AVAudioSourceNode alloc] initWithRenderBlock:
+                       ^OSStatus(BOOL * _Nonnull isSilence,
+                                 const AudioTimeStamp * _Nonnull timestamp,
+                                 AVAudioFrameCount frameCount,
+                                 AudioBufferList * _Nonnull outputData) {
+            // Implement synthesis on callback
+            return noErr;
+        }];
+    }
+
+    return _sourceNode;
+}
 @end
