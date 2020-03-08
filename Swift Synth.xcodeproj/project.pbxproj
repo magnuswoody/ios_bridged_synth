@@ -13,8 +13,6 @@
 		550D024B22E526DE002C57C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550D024A22E526DE002C57C9 /* Assets.xcassets */; };
 		550D024E22E526DE002C57C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550D024C22E526DE002C57C9 /* LaunchScreen.storyboard */; };
 		550D025622E53233002C57C9 /* UIView+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D025522E53233002C57C9 /* UIView+Add.swift */; };
-		550D025822E55477002C57C9 /* OldSynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D025722E55477002C57C9 /* OldSynth.swift */; };
-		550D025E22E557A5002C57C9 /* OldOscillator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550D025D22E557A5002C57C9 /* OldOscillator.swift */; };
 		55FB1E6322EE0B8700AED3D2 /* UIColor+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FB1E6222EE0B8700AED3D2 /* UIColor+Set.swift */; };
 		DB7A8236238817320075C7C1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DB7A8235238817320075C7C1 /* README.md */; };
 		F7843E60241572C400583096 /* Synth.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E5F241572C400583096 /* Synth.m */; };
@@ -44,11 +42,8 @@
 		550D024D22E526DE002C57C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		550D024F22E526DE002C57C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		550D025522E53233002C57C9 /* UIView+Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Add.swift"; sourceTree = "<group>"; };
-		550D025722E55477002C57C9 /* OldSynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldSynth.swift; sourceTree = "<group>"; };
-		550D025D22E557A5002C57C9 /* OldOscillator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldOscillator.swift; sourceTree = "<group>"; };
 		55FB1E6222EE0B8700AED3D2 /* UIColor+Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Set.swift"; sourceTree = "<group>"; };
 		DB7A8235238817320075C7C1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F7843E5C2415721F00583096 /* SynthUtilTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynthUtilTypes.h; sourceTree = "<group>"; };
 		F7843E5D241572C400583096 /* Swift Synth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift Synth-Bridging-Header.h"; sourceTree = "<group>"; };
 		F7843E5E241572C400583096 /* Synth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Synth.h; sourceTree = "<group>"; };
 		F7843E5F241572C400583096 /* Synth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Synth.m; sourceTree = "<group>"; };
@@ -124,9 +119,6 @@
 		550D025A22E556BA002C57C9 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				550D025722E55477002C57C9 /* OldSynth.swift */,
-				550D025D22E557A5002C57C9 /* OldOscillator.swift */,
-				F7843E5C2415721F00583096 /* SynthUtilTypes.h */,
 				F7843E5E241572C400583096 /* Synth.h */,
 				F7843E5F241572C400583096 /* Synth.m */,
 				F7843E5D241572C400583096 /* Swift Synth-Bridging-Header.h */,
@@ -280,8 +272,6 @@
 				F7843E762415808700583096 /* Oscillator.m in Sources */,
 				550D024222E526DD002C57C9 /* AppDelegate.swift in Sources */,
 				F7843E60241572C400583096 /* Synth.m in Sources */,
-				550D025E22E557A5002C57C9 /* OldOscillator.swift in Sources */,
-				550D025822E55477002C57C9 /* OldSynth.swift in Sources */,
 				550D024422E526DD002C57C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  NSObject+Synth.h
+//  Synth.h
 //  Swift Synth
 //
 //  Created by Magnus Woodgate on 08/03/2020.
@@ -7,7 +7,9 @@
 //
 
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import AVFoundation;
+
 #import "Oscillator.h"
 
 NS_ASSUME_NONNULL_BEGIN

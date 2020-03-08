@@ -1,5 +1,5 @@
 //
-//  NSObject+Oscillator.m
+//  Oscillator.m
 //  Swift Synth
 //
 //  Created by Magnus Woodgate on 08/03/2020.
