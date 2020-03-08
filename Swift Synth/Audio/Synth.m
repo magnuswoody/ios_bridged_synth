@@ -45,6 +45,10 @@
     return _engine.mainMixerNode.outputVolume;
 }
 
+- (void)setWaveformTo: (Signal) signal {
+    _signal = signal;
+}
+
 # pragma mark - Public Instance Methods
 
 - (id)initWithSignal:(Signal)signal {

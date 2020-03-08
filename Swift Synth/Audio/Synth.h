@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (Synth*)shared;
 
 - (id)initWithSignal: (Signal)signal;
+- (void)setWaveformTo: (Signal)signal;
 
 @end
 
