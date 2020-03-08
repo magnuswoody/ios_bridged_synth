@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "SynthUtilTypes.h"
 
+#define RANDOM_NUMF(MIN, MAX) MIN+arc4random_uniform(MAX-MIN+1)
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Oscillator : NSObject
