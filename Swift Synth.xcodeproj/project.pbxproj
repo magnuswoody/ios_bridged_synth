@@ -20,6 +20,9 @@
 		F7843E60241572C400583096 /* Synth.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E5F241572C400583096 /* Synth.m */; };
 		F7843E6B2415736800583096 /* Swift_SynthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E6A2415736800583096 /* Swift_SynthTests.m */; };
 		F7843E732415737F00583096 /* SynthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E722415737F00583096 /* SynthTests.m */; };
+		F7843E762415808700583096 /* Oscillator.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E752415808700583096 /* Oscillator.m */; };
+		F7843E772415808700583096 /* Oscillator.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E752415808700583096 /* Oscillator.m */; };
+		F7843E79241580D000583096 /* OscillatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7843E78241580D000583096 /* OscillatorTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		F7843E6A2415736800583096 /* Swift_SynthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Swift_SynthTests.m; sourceTree = "<group>"; };
 		F7843E6C2415736800583096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7843E722415737F00583096 /* SynthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynthTests.m; sourceTree = "<group>"; };
+		F7843E742415808700583096 /* Oscillator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Oscillator.h; sourceTree = "<group>"; };
+		F7843E752415808700583096 /* Oscillator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Oscillator.m; sourceTree = "<group>"; };
+		F7843E78241580D000583096 /* OscillatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OscillatorTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,8 @@
 				F7843E5E241572C400583096 /* Synth.h */,
 				F7843E5F241572C400583096 /* Synth.m */,
 				F7843E5D241572C400583096 /* Swift Synth-Bridging-Header.h */,
+				F7843E742415808700583096 /* Oscillator.h */,
+				F7843E752415808700583096 /* Oscillator.m */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 				F7843E6A2415736800583096 /* Swift_SynthTests.m */,
 				F7843E6C2415736800583096 /* Info.plist */,
 				F7843E722415737F00583096 /* SynthTests.m */,
+				F7843E78241580D000583096 /* OscillatorTests.m */,
 			);
 			path = "Swift SynthTests";
 			sourceTree = "<group>";
@@ -268,6 +277,7 @@
 				55FB1E6322EE0B8700AED3D2 /* UIColor+Set.swift in Sources */,
 				550D025622E53233002C57C9 /* UIView+Add.swift in Sources */,
 				550D024622E526DD002C57C9 /* SynthViewController.swift in Sources */,
+				F7843E762415808700583096 /* Oscillator.m in Sources */,
 				550D024222E526DD002C57C9 /* AppDelegate.swift in Sources */,
 				F7843E60241572C400583096 /* Synth.m in Sources */,
 				550D025E22E557A5002C57C9 /* OldOscillator.swift in Sources */,
@@ -280,8 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7843E772415808700583096 /* Oscillator.m in Sources */,
 				F7843E732415737F00583096 /* SynthTests.m in Sources */,
 				F7843E6B2415736800583096 /* Swift_SynthTests.m in Sources */,
+				F7843E79241580D000583096 /* OscillatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

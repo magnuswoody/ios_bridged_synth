@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Oscillator.h"
 
 @interface OscillatorTests : XCTestCase
 
@@ -22,16 +23,18 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testAmplitudeFrequencySettableGettable {
+    
+    float targetFrequency = 1000; // Hz
+    float targetAmplitude = 0.5; // Linear Gain
+    
+    Oscillator.frequency = targetFrequency;
+    
+    XCTAssertEqual(Oscillator.frequency, targetFrequency);
+    
+    Oscillator.amplitude = targetAmplitude;
+    
+    XCTAssertEqual(Oscillator.amplitude, targetAmplitude);
 }
 
 @end
