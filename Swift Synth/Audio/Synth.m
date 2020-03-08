@@ -36,11 +36,13 @@
 # pragma mark - Public Properties
 
 - (void)setVolume:(float)volume {
-    _engine.mainMixerNode.outputVolume = volume;
+    if (_engine != nil) {
+        _engine.mainMixerNode.outputVolume = volume;
+    }
 }
 
 - (float)volume {
-    return _engine.mainMixerNode.outputVolume;
+    return _engine != nil ? _engine.mainMixerNode.outputVolume : -1.0f;
 }
 
 - (void)setWaveformTo: (Signal) signal {
@@ -48,7 +50,11 @@
 }
 
 - (BOOL)isPlaying {
-    return _engine.isRunning && (_engine.mainMixerNode.outputVolume > 0.0f);
+    if (_engine != nil) {
+        return _engine.isRunning && (_engine.mainMixerNode.outputVolume > 0.0f);
+    } else {
+        return NO;
+    }
 }
 
 # pragma mark - Public Instance Methods
