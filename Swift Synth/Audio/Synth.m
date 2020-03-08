@@ -83,12 +83,20 @@
 {
     // Lazy instantiation style
     if (_sourceNode == nil) {
+        
         _sourceNode = [[AVAudioSourceNode alloc] initWithRenderBlock:
                        ^OSStatus(BOOL * _Nonnull isSilence,
                                  const AudioTimeStamp * _Nonnull timestamp,
                                  AVAudioFrameCount frameCount,
                                  AudioBufferList * _Nonnull outputData) {
-            // Implement synthesis on callback
+            
+            for (AVAudioFrameCount frame = 0; frame < frameCount; frame++) {
+                for (int bufferIndex = 0; bufferIndex < outputData->mNumberBuffers; bufferIndex++) {
+                    float *data = outputData->mBuffers[bufferIndex].mData;
+                    data[frame] = 0.0f;
+                }
+            }
+
             return noErr;
         }];
     }
