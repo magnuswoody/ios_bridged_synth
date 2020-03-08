@@ -8,6 +8,14 @@
 
 #import "Synth.h"
 
+#import <AVFoundation/AVFoundation.h>
+
+@interface Synth()
+
+@property (nonatomic, strong) AVAudioEngine *engine;
+
+@end
+
 @implementation Synth : NSObject
 
 #pragma mark - Public Static Methods
@@ -20,6 +28,15 @@
         sharedInstance = [[self alloc] init];
     });
     return sharedInstance;
+}
+
+# pragma mark - Public Properties
+- (void)setVolume:(float)volume {
+    _engine.mainMixerNode.outputVolume = volume;
+}
+
+- (float)volume {
+    return _engine.mainMixerNode.outputVolume;
 }
 
 @end
