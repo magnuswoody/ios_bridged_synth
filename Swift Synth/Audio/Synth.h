@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Synth : NSObject
 
 @property (nonatomic, assign) float volume;
+@property (nonatomic, assign, readonly) BOOL isPlaying;
 @property (class, readonly) Synth *shared;
 
 - (id)initWithSignal: (Signal)signal;

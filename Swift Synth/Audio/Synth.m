@@ -49,6 +49,10 @@
     _signal = signal;
 }
 
+- (BOOL)isPlaying {
+    return _engine.isRunning && (_engine.mainMixerNode.outputVolume > 0.0f);
+}
+
 # pragma mark - Public Instance Methods
 
 - (id)initWithSignal:(Signal)signal {
