@@ -12,6 +12,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Synth : NSObject
+
++(Synth*) shared;
+
 @end
 
 NS_ASSUME_NONNULL_END

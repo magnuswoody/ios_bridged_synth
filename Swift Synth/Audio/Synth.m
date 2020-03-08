@@ -10,4 +10,16 @@
 
 @implementation Synth : NSObject
 
+#pragma mark - Public Static Methods
+
++ (instancetype)shared
+{
+    static dispatch_once_t dispatcher_once;
+    static id sharedInstance;
+    dispatch_once(&dispatcher_once, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
+
 @end
