@@ -9,6 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SynthUtilTypes.h"
+#import "Oscillator.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (Synth*)shared;
 
-- (id)init;
+- (id)initWithSignal: (Signal)signal;
 
 @end
 

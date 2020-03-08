@@ -30,7 +30,7 @@
     static dispatch_once_t dispatcher_once;
     static id sharedInstance;
     dispatch_once(&dispatcher_once, ^{
-        sharedInstance = [[self alloc] init];
+        sharedInstance = [[self alloc] initWithSignal:[Oscillator sine]];
     });
     return sharedInstance;
 }
@@ -47,7 +47,7 @@
 
 # pragma mark - Public Instance Methods
 
-- (id)init {
+- (id)initWithSignal:(Signal)signal {
     if ( self = [super init] ) {
         _engine = [[AVAudioEngine alloc] init];
         
@@ -57,7 +57,7 @@
         _time = 0.01f;
         _sampleRate = format.sampleRate;
         _deltaTime = 1.0f / ((float)self.sampleRate);
-        _signal = ^float(float time) {
+        _signal = signal != nil ? signal : ^float(float time) {
             return 0.0f;
         };
         
