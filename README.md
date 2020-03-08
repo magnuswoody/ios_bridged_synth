@@ -1,5 +1,7 @@
 # Coding challenge
 
+*See the original README below the additional comments I have added here.*
+
 # Additional Information
 
 ## How would you generate 3 voices simultaneously using this synthesizer?
@@ -13,6 +15,37 @@ output(t) = sine(t) + square(t) + triangle(t)
 
 This is of course generic and works for `1 -> N` oscillators (but of course depends on your computation power : this could become very expensive if implemented inefficiently).
 
+## Unit Testing
+
+Where possible, the TDD (Test Driven Design) approach was used to help influence the API design and ensure highest test coverage, however this was just a simple implementation of what could be done in production.
+
+It is also worth noting that I have implemented a performance test which can be run on device to check the speed of oscillator signal calculation. 
+
+These tests can be run using the standard xcode unit test interface for XCTest.
+
+## Development Devices
+
+This was developed for an iPhone 11 with iOS 13.3.0, but was additionally tested on iPhone 11 simulator variations.
+
+## Future improvements
+
+If there was time for future improvements I have listed some below:
+- Mocking of the AVAudioEngine to reduce the surface individual unit tests on the `Synth` class
+- Different types of synthesis:
+  - [Wavetable](http://www.aes.org/e-lib/browse.cfm?elib=7379) is usually more common for this purpose as it involves less OTF (on-the-fly) computation, but requires more memory reads (however this is usually better for non RTOS devices like iOS)
+  - [Physical modelling](https://ccrma.stanford.edu/software/stk/) or [Granular](http://www.aes.org/e-lib/browse.cfm?elib=11144) synthesis to emulate more interesting sounds - especially with such a cool interface on iOS
+- Smoothing:
+  - A form of fading in between frequencies/amplitudes to avoid audible artefacts/crackles
+  - Perhaps a larger lookahead buffer as well, since this doesn't require such minimal latency
+- More optimized synthesis in software:
+  - Looking towards generation in C++ with optimizations for each platform
+
+
+These are just a few to explore if it was to go any further!
+
+## End note
+
+It was an interesting mini synth!
 
 # Original README
 ## Introduction
