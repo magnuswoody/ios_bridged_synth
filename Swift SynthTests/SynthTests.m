@@ -28,5 +28,12 @@
     XCTAssertNotNil(ref);
 }
 
+- (void)testSharedInstanceInstiantedOnlyOnce {
+    Synth* ref0 = [Synth shared];
+    Synth* ref1 = [Synth shared];
+    XCTAssertEqualObjects(ref0, ref1);
+}
+
+
 
 @end
