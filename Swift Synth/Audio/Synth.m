@@ -75,6 +75,18 @@
         [_engine connect:_engine.mainMixerNode to:_engine.outputNode format:nil];
         _engine.mainMixerNode.outputVolume = 0.0f; // Default Behaviour muted to begin with...
         
+        // Prepare for audio start with allocation
+        [_engine prepare];
+        
+        NSError *error = nil;
+        BOOL didStart = [_engine startAndReturnError:&error];
+        
+        if (didStart == YES) {
+            NSLog(@"Successfully started the audioEngine!");
+        } else {
+            NSLog(@"Could not start audioEngine: %@", [error debugDescription]);
+        }
+        
         return self;
     } else {
         return self;
