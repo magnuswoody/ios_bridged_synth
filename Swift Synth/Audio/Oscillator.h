@@ -7,9 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SynthUtilTypes.h"
 
 #define RANDOM_NUMF(MIN, MAX) MIN+arc4random_uniform(MAX-MIN+1)
+
+// Waveform type enum
+typedef NS_ENUM(NSUInteger, Waveform) {
+    sine,
+    triangle,
+    sawtooth,
+    square,
+    whiteNoise
+};
+
+// Define callback type
+typedef float (^Signal)(float);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,11 +29,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (class) float amplitude;
 @property (class) float frequency;
 
-+(Signal) sine;
-+(Signal) triangle;
-+(Signal) sawtooth;
-+(Signal) square;
-+(Signal) whitenoise;
+@property (class, readonly) Signal sine;
+@property (class, readonly) Signal triangle;
+@property (class, readonly) Signal sawtooth;
+@property (class, readonly) Signal square;
+@property (class, readonly) Signal whiteNoise;
 
 @end
 

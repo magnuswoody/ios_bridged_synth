@@ -64,13 +64,15 @@ class SynthViewController: UIViewController {
     // MARK: Selector Functions
     
     @objc private func updateOscillatorWaveform() {
-        let waveform = Waveform(rawValue: waveformSelectorSegmentedControl.selectedSegmentIndex)!
+        let waveform = Waveform(rawValue: UInt(waveformSelectorSegmentedControl.selectedSegmentIndex))!
+        
         switch waveform {
-            case .sine: Synth.shared.setWaveformTo(Oscillator.sine)
-            case .triangle: Synth.shared.setWaveformTo(Oscillator.triangle)
-            case .sawtooth: Synth.shared.setWaveformTo(Oscillator.sawtooth)
-            case .square: Synth.shared.setWaveformTo(Oscillator.square)
-            case .whiteNoise: Synth.shared.setWaveformTo(Oscillator.whiteNoise)
+               case .sine: Synth.shared.setWaveformTo(Oscillator.sine)
+               case .triangle: Synth.shared.setWaveformTo(Oscillator.triangle)
+               case .sawtooth: Synth.shared.setWaveformTo(Oscillator.sawtooth)
+               case .square: Synth.shared.setWaveformTo(Oscillator.square)
+               case .whiteNoise: Synth.shared.setWaveformTo(Oscillator.whiteNoise)
+        @unknown default: Synth.shared.setWaveformTo(Oscillator.sine)
         }
     }
     

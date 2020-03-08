@@ -80,9 +80,9 @@ static float _frequency = 440.0f; // Hz
     };
 }
 
-+(Signal) whitenoise {
++(Signal) whiteNoise {
     return ^float(float time) {
-        return RANDOM_NUMF(-1.0f, 1.0f);
+        return RANDOM_NUMF(-1.0f, 1.0f) * Oscillator.amplitude;
     };
 }
 

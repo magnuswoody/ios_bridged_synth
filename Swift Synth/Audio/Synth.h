@@ -8,7 +8,6 @@
 
 
 #import <Foundation/Foundation.h>
-#import "SynthUtilTypes.h"
 #import "Oscillator.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -16,8 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Synth : NSObject
 
 @property (nonatomic, assign) float volume;
-
-+ (Synth*)shared;
+@property (class, readonly) Synth *shared;
 
 - (id)initWithSignal: (Signal)signal;
 - (void)setWaveformTo: (Signal)signal;
