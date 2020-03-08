@@ -51,7 +51,7 @@
     Signal square = [Oscillator square];
     XCTAssertNotNil(square);
     
-    Signal whitenoise = [Oscillator whitenoise];
+    Signal whitenoise = [Oscillator whiteNoise];
     XCTAssertNotNil(whitenoise);
     
 }
