@@ -15,6 +15,19 @@ output(t) = sine(t) + square(t) + triangle(t)
 
 This is of course generic and works for `1 -> N` oscillators (but of course depends on your computation power : this could become very expensive if implemented inefficiently).
 
+To be precise in relating to this project, this would mean on the callback provided in our `AVAudioSourceNode`, instead of calculating one signal output based on time, multiple could be calculated.
+
+One implementation could be the `Synth` object instance contains a list/array of oscillators and upon `AVAudioEngine` requesting a new block of audio, the output could be incrementally added by calculating the output for each signal based on time `t` (`self.time`).
+
+```
+float output = 0.0f;
+for (osc* oscillator in Oscillators) {
+    output += oscillator.signal(self.time)
+}
+```
+
+This implementation would allow dynamic resizing of the oscillator bank, where each oscillator could have a different fundamental `frequency` and `amplitude`.
+
 ## Unit Testing
 
 Where possible, the TDD (Test Driven Design) approach was used to help influence the API design and ensure highest test coverage, however this was just a simple implementation of what could be done in production.
