@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) float volume;
 
-+(Synth*) shared;
++ (Synth*)shared;
+
+- (id)init;
 
 @end
 

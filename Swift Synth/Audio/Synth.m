@@ -39,4 +39,15 @@
     return _engine.mainMixerNode.outputVolume;
 }
 
+# pragma mark - Public Instance Methods
+
+- (id)init {
+    if ( self = [super init] ) {
+        _engine = [[AVAudioEngine alloc] init];        
+        return self;
+    } else {
+        return self;
+    }
+}
+
 @end
