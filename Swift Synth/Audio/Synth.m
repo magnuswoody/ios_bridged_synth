@@ -17,6 +17,7 @@
 @property (nonatomic, assign) double sampleRate;
 @property (nonatomic, assign) float deltaTime;
 @property (nonatomic, assign) float time;
+@property (nonatomic, copy) Signal signal;
 
 @end
 
@@ -56,6 +57,9 @@
         _time = 0.01f;
         _sampleRate = format.sampleRate;
         _deltaTime = 1.0f / ((float)self.sampleRate);
+        _signal = ^float(float time) {
+            return 0.0f;
+        };
         
         // Setup input format as seen in Synth.swift
         AVAudioFormat* inputFormat = [[AVAudioFormat alloc] initWithCommonFormat:format.commonFormat sampleRate:_sampleRate channels:1 interleaved:format.isInterleaved];
@@ -84,16 +88,28 @@
     // Lazy instantiation style
     if (_sourceNode == nil) {
         
+        __weak Synth* selfWeakRef = self;
+        
         _sourceNode = [[AVAudioSourceNode alloc] initWithRenderBlock:
                        ^OSStatus(BOOL * _Nonnull isSilence,
                                  const AudioTimeStamp * _Nonnull timestamp,
                                  AVAudioFrameCount frameCount,
                                  AudioBufferList * _Nonnull outputData) {
             
+            // Strong ownership for separate threaded callback reference
+            __strong Synth* selfStrongRef = selfWeakRef;
+            
             for (AVAudioFrameCount frame = 0; frame < frameCount; frame++) {
+                
+                // Caculate output waveform for frame and increment time
+                float processedSample = self->_signal(selfStrongRef.time);
+                selfStrongRef.time += selfStrongRef.deltaTime;
+                
                 for (int bufferIndex = 0; bufferIndex < outputData->mNumberBuffers; bufferIndex++) {
+                    
+                    // Locate buffer pointer and write calculated value to output buffer
                     float *data = outputData->mBuffers[bufferIndex].mData;
-                    data[frame] = 0.0f;
+                    data[frame] = processedSample;
                 }
             }
 

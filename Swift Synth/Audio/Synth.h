@@ -8,6 +8,7 @@
 
 
 #import <Foundation/Foundation.h>
+#import "SynthUtilTypes.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
