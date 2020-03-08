@@ -56,4 +56,27 @@
     
 }
 
+- (void)testSineSignalPerformance {
+    // Sample implementation, can be implemented for all signal types as a basic performance measure of on device processing
+    Signal signal = [Oscillator sine];
+    NSUInteger sampleCount = 10000;
+    NSMutableArray *samples = [[NSMutableArray alloc] initWithCapacity:0];
+    
+    float time = 0.0f;
+    float delta = 1.0f / 44100.0f;
+    
+    for (NSUInteger index = 0; index < sampleCount; index++) {
+        [samples addObject:[NSNumber numberWithFloat:time]];
+        time += delta;
+    }
+    
+    [self measureBlock:^{
+        // Measure execution of iteration and processing
+        for (NSNumber* sample in samples) {
+            float outputSample = 0.0f;
+            outputSample = signal([sample floatValue]);
+        }
+    }];
+}
+
 @end
